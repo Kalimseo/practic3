@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		
+		const regex = /((1?\d\d?|2[0-4][0-9]|25[0-5])\.){3}(1?\d\d?|24[0-9]|25[0-5])/g;
+		
+		function func(){
+			var stroke = document.getElementById('text').value;
+			var ansfer = stroke.match(regex);
+			if (alert != null){
+				alert("Найден верный/верные ip-адресс(а): "+ansfer);
+			}
+			if (alert = null){
+				alert("Верных ip-адрессов не найдено");
+			}
+		}
+	</script>
+	
+	<input type="text" id="text" placeholder="Впишите строку">
+	<input type="submit" value="Найти IP" onclick="func()">
+	
+</body>
+</html>
